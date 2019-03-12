@@ -1,0 +1,21 @@
+pipeline {
+    agent none
+    stages {
+        stage('MMSC DTAG 5.3.1.0') {
+            parallel {
+                stage('Job1') {
+                    steps {
+                        build 'job1'
+                    }
+                    
+                }
+                stage('job2'){
+					steps{
+					    build 'job2'
+                    }
+                    
+                }
+            }
+        }
+    }
+}
