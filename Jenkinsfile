@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('DevStage') {
+    stage('Collecting files') {
       parallel {
         stage('Initial-Build') {
           steps {
