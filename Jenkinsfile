@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Collecting files') {
+    stage('') {
       parallel {
         stage('Initial-Build') {
           steps {
@@ -20,7 +20,7 @@ pipeline {
         }
       }
     }
-    stage('Validating_Class') {
+    stage('') {
       parallel {
         stage('Verify classes') {
           steps {
@@ -34,7 +34,7 @@ pipeline {
         }
       }
     }
-    stage('Testing') {
+    stage('') {
       parallel {
         stage('Unit test') {
           steps {
@@ -48,7 +48,7 @@ pipeline {
         }
       }
     }
-    stage('Deploy_Binary') {
+    stage('') {
       parallel {
         stage('Deployment') {
           steps {
