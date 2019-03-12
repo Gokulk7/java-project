@@ -5,7 +5,6 @@ pipeline {
       parallel {
         stage('Initial-Build') {
           steps {
-            build 'job1'
             echo 'job1'
           }
         }
@@ -21,7 +20,7 @@ pipeline {
         }
       }
     }
-    stage('Verify classes') {
+    stage('Validating_Class') {
       parallel {
         stage('Verify classes') {
           steps {
@@ -35,7 +34,7 @@ pipeline {
         }
       }
     }
-    stage('Unit test') {
+    stage('Testing') {
       parallel {
         stage('Unit test') {
           steps {
@@ -49,11 +48,11 @@ pipeline {
         }
       }
     }
-    stage('Deploy') {
+    stage('Deploy_Binary') {
       parallel {
-        stage('Deploy') {
+        stage('Deployment') {
           steps {
-            echo 'Deployment done'
+            echo 'Binary Deployment done'
           }
         }
         stage('Upload to Jfrog') {
